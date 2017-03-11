@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title> {{ productName }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button>
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="uimax-product-detail">
+    <div class="uimax-info" >
+      <div class="uimax-thumbnail">
+        <img src="{{ item.imagesrc }}" class="img-responsive" alt="" />
+      </div>
+      <h4 class="uimax-name">{{ item.handle }}</h4>
+      <div class="uimax-price">${{ item.price }}</div>
+      <div class="uimax-quantity">
+        <ion-row>
+          <ion-col width-20>
+            <button ion-button icon-only block color="light">
+              <ion-icon name="add"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col width-60>
+            <ion-item class="uimax-input-basic text-center">
+              <ion-input type="number" placeholder="1"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col width-20>
+            <button ion-button icon-only block color="light">
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="uimax-description">{{ item.description }}</div>
+    </div>
+  </div>
+  <!-- <div class="uimax-product-detail">
+    <div class="uimax-info" *ngFor="let item of items">
+      <div class="uimax-thumbnail">
+        <img src="{{ item.thumb }}" class="img-responsive" alt="" />
+      </div>
+      <h4 class="uimax-name">{{ item.name }}</h4>
+      <div class="uimax-price">${{ item.price }}</div>
+      <div class="uimax-quantity">
+        <ion-row>
+          <ion-col width-20>
+            <button ion-button icon-only block color="light">
+              <ion-icon name="add"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col width-60>
+            <ion-item class="uimax-input-basic text-center">
+              <ion-input type="number" placeholder="1"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col width-20>
+            <button ion-button icon-only block color="light">
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="uimax-description">{{ item.description }}</div>
+    </div>
+  </div> -->
+
+</ion-content>
+
+<ion-footer class="uimax-btn-add-to-cart">
+    <button ion-button full color="primary" (click)="addToCart(item)">Add to Cart</button>
+</ion-footer>

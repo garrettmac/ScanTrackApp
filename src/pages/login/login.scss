@@ -1,0 +1,74 @@
+page-login {
+
+
+	.uimax-bg-cover {
+		background: #f5f5f5 url("http://onetown.com/am-site/media/homepage-gallery---slide-1.jpg") no-repeat center fixed;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+	.light{
+		color:white;
+	}
+	.myPulse{
+		-webkit-animation:pulse!important;
+		animation:pulse!important;
+		-webkit-animation-duration:3s!important;
+		animation-duration:3s!important;
+		animation-iteration-count:infinite!important}
+	.myBounceInDown{
+		-webkit-animation:bounceInDown!important;
+		animation:bounceInDown!important;
+		-webkit-animation-duration:3s!important;
+		animation-duration:3s!important;
+}
+	.myBounceInRight{
+		-webkit-animation:bounceInRight!important;
+		animation:bounceInRight!important;
+		-webkit-animation-duration:5s!important;
+		animation-duration:5s!important;
+}
+	.myBounceInUp{
+		-webkit-animation:bounceInUp!important;
+		animation:bounceInUp!important;
+		-webkit-animation-duration:8s!important;
+		animation-duration:8s!important;
+}
+.login-logo-image {
+// top:0;
+// bottom:0;
+// left:0;
+// right:0;
+	margin-bottom: 20%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+	.uimax-content {
+		color: #455255;
+	    position: absolute;
+    	left: 16px;
+    	right: 16px;
+    	bottom: 16px;
+
+		.uimax-heading {
+			font-size: 24px;
+			font-weight: 700;
+		    line-height: 1.4;
+			text-transform: uppercase;
+		}
+
+		.uimax-description {
+			font-size: 14px;
+			line-height: 1.7;
+			margin-bottom: 70px;
+		}
+	}
+
+}

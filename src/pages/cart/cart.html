@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Cart</ion-title>
+
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button>
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="bg-gray">
+
+
+    <ion-list no-lines class="uimax-cart-list">
+
+      <ion-item class="uimax-cart-item"  *ngFor="let item of cartProducts">
+        <ion-thumbnail item-left class="uimax-cart-thumb">
+          <img src="{{item.thumb}}" alt="">
+        </ion-thumbnail>
+        <h2 class="uimax-cart-name">{{item.name}}</h2>
+        <p class="uimax-cart-price">${{item.price}}</p>
+        <div item-right class="uimax-cart-quantity">
+          <button ion-button icon-only small clear color="dark" class="uimax-btn-add">
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <ion-item class="uimax-input-quantity uimax-input-basic">
+            <ion-input type="text" value="1"></ion-input>
+          </ion-item>
+          <button ion-button icon-only small clear color="dark" class="uimax-btn-remove">
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+
+
+      <ion-list-header class="uimax-list-header">Order summary</ion-list-header>
+
+      <ion-item class="uimax-cart-item">
+        <div class="uimax-cart-subtotal">
+          <div class="title">Sub total</div>
+          <div class="value">$20.90</div>
+        </div>
+        <div class="uimax-cart-total">
+          <div class="title">Total</div>
+          <div class="value">$325.90</div>
+        </div>
+      </ion-item>
+
+    </ion-list>
+
+</ion-content>
+
+<ion-footer class="uimax-btn-checkout">
+    <button ion-button full color="primary" (click)="goToCheckout()">Check out</button>
+</ion-footer>
