@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 import { AlertController ,ModalController,NavParams} from 'ionic-angular';
 import { InAppBrowser,BarcodeScanner } from 'ionic-native';
 // import { ScanProductDetailPage } from './modal/scan-product-detail';
-// import {_Storage} from '../storage-sync';
+// import {_Storage} from '../storage';
 // import {GoogleDrive} from '../google-drive/google-drive';
 import _  from 'lodash';
 const headers = new Headers({'Content-Type': 'application/json'});

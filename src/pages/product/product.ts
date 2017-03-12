@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams,AlertController } from 'ionic-angular';
 
 
-import { Storage } from './../../providers/storage-sync';
+
 import { CartPage } from '../cart/cart';
 
 @Component({
@@ -10,16 +10,16 @@ import { CartPage } from '../cart/cart';
   templateUrl: 'product.html'
 })
 
-export class ProductPage {
+export class ProductDetailPage {
 
   items: Array<any>;
   item: any;
   dataId: string;
   productName: string;
 
-  constructor(public alertCtrl: AlertController,public Storage:Storage,public navCtrl: NavController, private navParams: NavParams,
+  constructor(public alertCtrl: AlertController,public navCtrl: NavController, private navParams: NavParams,
 ) {
-  // constructor(public Storage:Storage,public navCtrl: NavController, private navParams: NavParams, googleSheets: GoogleDrive ) {
+  // constructor(public _Storage:_Storage,public navCtrl: NavController, private navParams: NavParams, googleSheets: GoogleDrive ) {
 
     // Get item params
     this.item = navParams.get('item');

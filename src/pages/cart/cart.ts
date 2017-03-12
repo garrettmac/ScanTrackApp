@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 
-import { ProductPage } from '../product/product';
-import { _Storage } from './../../providers/storage-sync';
+import { ProductDetailPage } from '../product/product';
+import { _Storage } from './../../providers/storage';
 import { GoogleAnalytics } from 'ionic-native';
 
 
@@ -45,7 +45,7 @@ getTotal(){
 return 30
 }
   goToCheckout() {
-    this.navCtrl.push(ProductPage);
+    this.navCtrl.push(ProductDetailPage);
   }
 
 }

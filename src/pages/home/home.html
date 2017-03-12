@@ -26,15 +26,15 @@
    <ion-refresher-content></ion-refresher-content>
  </ion-refresher>
 <!-- <p>Error: {{errorMessage}}</p> -->
-  <div class="uimax-category-list">
+  <div *ngIf="items" class="uimax-category-list">
 
-    <ion-card *ngFor="let item of items?" (click)="goToCategory(item)">
+    <ion-card *ngFor="let item of items" (click)="goToCategory(item)">
 <div *ngIf="item?.image?.src">
 
-      <img   src="{{ _.get(item,'image.src') }}" alt="" />
+      <img   src="{{ item?.image?.src}}" alt="" />
     </div>
       <div class="uimax-item-wrapper">
-        <div class="card-title">{{ item?.items }}</div>
+        <div class="card-title">{{ item?.title }}</div>
         <div class="card-subtitle">Type: {{ item?.product_type }}</div>
         <div class="card-subtitle">published: {{ item?.published_at }} </div>
       </div>

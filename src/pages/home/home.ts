@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController,AlertController,NavParams,Platform } from 'ionic-angular';
+import { BarcodeScanner } from 'ionic-native';
 import {Shopify} from '../../providers/shopify';
 import _ from 'lodash';
 import { ScanModal } from '../scan-modal/scan-modal';
@@ -10,9 +11,21 @@ import { ScanModal } from '../scan-modal/scan-modal';
 export class HomePage {
     name: string
     errorMessage: any
+    _=_
     // items:  Observable<Item>;
     // items:  Promise<any[]>
-    items:  any[]
+    // items:  any[]
+    items: Array<{
+      id: number,
+      title: string,
+      body_html: string,
+      vendor: string,
+      product_type: string,
+      created_at: string,
+      handle: string,
+      image: string,
+      published_at: string
+    }>;
   newProduct={
     // id: "",
     "sku": "",
@@ -35,12 +48,12 @@ export class HomePage {
 
     constructor(
       public alert: AlertController,
-      public Storage: Storage,
+      // public Storage: _Storage,
       public shopify: Shopify,
       public platform: Platform,
       public modal: ModalController,
-
-      public navCtrl: NavController, public navParams: NavParams) {
+      public navCtrl: NavController,
+       public navParams: NavParams) {
 
       }
       goToCategory(item) {

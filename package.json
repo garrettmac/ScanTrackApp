@@ -20,10 +20,12 @@
     "@angular/platform-browser-dynamic": "2.4.8",
     "@angular/platform-server": "2.4.8",
     "@ionic/storage": "2.0.0",
+    "@types/jspdf": "^1.1.31",
     "ionic-angular": "2.2.0",
     "ionic-native": "2.4.1",
     "ionicons": "3.0.0",
     "lodash": "^4.17.4",
+    "pdfmake": "^0.1.26",
     "rxjs": "5.0.1",
     "sw-toolbox": "3.4.0",
     "zone.js": "0.7.2"
@@ -34,12 +36,12 @@
   },
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
-      "cordova-plugin-console",
-      "cordova-plugin-statusbar",
-      "cordova-plugin-transport-security",
-      "cordova-plugin-device",
-      "cordova-plugin-splashscreen",
-      "ionic-plugin-keyboard"
+    "cordova-plugin-console",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-transport-security",
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [
     "ios",
