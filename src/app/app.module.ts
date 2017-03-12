@@ -34,8 +34,8 @@ if(inProductionMode)enableProdMode();
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    InvoicePage
-    // HomePage
+    InvoicePage,
+    HomePage
   ],
   providers: [_Storage,Invoice,Shopify,{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

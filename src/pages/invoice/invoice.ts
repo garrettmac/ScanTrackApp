@@ -14,7 +14,7 @@ declare let jsPDF;
 import { Invoice } from '../../providers/invoice';
 declare var pdfMake: any;
 declare var cordova: any;
-class PDFModel {constructor(public title: string, public location: string){console.log("title: ",title);}removePDF(title){}}
+// class PDFModel {constructor(public title: string, public location: string){console.log("title: ",title);}removePDF(title){}}
 // declare var buildPdf: any;
 
 
@@ -28,19 +28,19 @@ export class InvoicePage {
 
   static readonly googleUrlPrefix = 'https://docs.google.com/gview?embedded=true&url=';
    storageDirectory: string = '';
-   pdf: PDFModel;
+  //  pdf: PDFModel;
    pdfFile: string='';
    OnlineToggle: boolean;
    onlineLocation ='http://www.axmag.com/download/pdfurl-guide.pdf';
 
-   companyAddress= {
+   public companyAddress= {
 Business:'Business Name',
 Address:'Address: 123 Main St.',
 Fax:'Fax: (123) 555-5555',
 Office:'Fax: (123) 555-5555',
 Website:'www.example.com'
 }
-shippingAddress= {
+public shippingAddress= {
  Name:'Customer Name',
  Address:'Address: 123 Main St.',
  Phone:'Fax: (123) 555-5555'
@@ -106,11 +106,11 @@ console.log("url: ",url);
     title: 'Company Informantion',
     message: "Update Business Contact Info",
     inputs: [
-      {name: 'Business',value:`${companyAddress.Business}`,placeholder:"Business"},
-      {name: 'Address',value:`${companyAddress.Address}`,placeholder:"Address"},
-      {name: 'Fax',value:`${companyAddress.Fax}`,placeholder:"Fax"},
-      {name: 'Office',value:`${companyAddress.Office}` ,placeholder:"Office"},
-      {name: 'Website',value:`${companyAddress.Website}` ,placeholder:"Website.com"}
+      {name: 'Business',value:companyAddress.Business,placeholder:"Business"},
+      {name: 'Address',value:companyAddress.Address,placeholder:"Address"},
+      {name: 'Fax',value:companyAddress.Fax,placeholder:"Fax"},
+      {name: 'Office',value:companyAddress.Office ,placeholder:"Office"},
+      {name: 'Website',value:companyAddress.Website ,placeholder:"Website.com"}
     ],
     buttons: [
       {text: 'Cancel',handler: data => {console.log('Cancel clicked',data);}},
@@ -128,9 +128,9 @@ console.log("url: ",url);
     title: 'Customer Informantion',
     message: "Update Customer Informantion",
     inputs: [
-      {name: 'Customer',value:`${shippingAddress.Name}`,placeholder:"Name"},
-      {name: 'Address',value:`${shippingAddress.Address}`,placeholder:"Address"},
-      {name: 'Phone',value:`${shippingAddress.Phone}`,placeholder:"Phone"}
+      {name: 'Customer',value:shippingAddress.Name,placeholder:"Name"},
+      {name: 'Address',value:shippingAddress.Address,placeholder:"Address"},
+      {name: 'Phone',value:shippingAddress.Phone,placeholder:"Phone"}
     ],
     buttons: [
       {text: 'Cancel',handler: data => {console.log('Cancel clicked',data);}},

@@ -13,8 +13,8 @@ import { InvoicePage } from '../pages/invoice/invoice';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // rootPage: any = HomePage;
-  rootPage: any = InvoicePage;
+  rootPage: any = HomePage;
+  // rootPage: any = InvoicePage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -24,6 +24,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
+      { title: 'Invoices', component: InvoicePage }
     ];
 
   }
